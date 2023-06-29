@@ -1,0 +1,25 @@
+.micro-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* Adjust the height as needed */
+  }
+  
+  .spinner {
+    border: 2px solid #ccc;
+    border-top-color: #777;
+    border-radius: 50%;
+    width: 20px; /* Adjust the size of the spinner */
+    height: 20px; /* Adjust the size of the spinner */
+    animation: spin 0.8s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
