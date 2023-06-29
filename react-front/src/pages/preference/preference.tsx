@@ -29,7 +29,6 @@ function UserPreference() {
    const navigate = useNavigate()
    const token = getToken()
    useEffect(()=>{
-     console.log(user)
      if(!( token && user )) navigate("/")
    },[user,token,navigate])
     return (

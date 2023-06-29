@@ -35,7 +35,10 @@ function NewsCard(props:newsPropsType){
                 {  
                    categories.length>0 ?categories.map((category:any)=>(
                     <div key={'catetory'+category.id} className="form-check">
-                        <input  className="form-check-input" type="checkbox" id={"inlineCheckbox1"+category.id} value="option1" defaultChecked={category.id === checked.category_id} />
+                        
+                        <input  className="form-check-input" type="checkbox" id={"inlineCheckbox1"+category.id} value="option1" defaultChecked={
+                            // eslint-disable-next-line
+                            category.id == checked.category_id} />
                         <label className="form-check-label" htmlFor={"inlineCheckbox1"+category.id}>{category.name}</label>
                   </div>)) 
                   : ''
@@ -45,7 +48,7 @@ function NewsCard(props:newsPropsType){
                 {tags.length>0 ? tags.map((tag:any)=>(
                     <span key={'tag'+tag.id} className={
                         // eslint-disable-next-line
-                        tag.id == checked.category_id? "tag-checked" :"tag"}>
+                        tag.id == checked.tag_id? "tag-checked" :"tag"}>
                         #{tagLetter(tag?.name)}
                     </span>) 
                 ): ''}

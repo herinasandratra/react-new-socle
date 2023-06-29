@@ -50,7 +50,7 @@ function PreferenceForm(props: preferenceProps){
                         </div>
                         <div className="form-group">
                             <Category 
-                                value={props.category_id ?? 4}
+                                value={props.category_id ?? 0}
                                 onChange={(category_id:number)=>onChange(category_id,'category_id')}
                             />
                         </div>

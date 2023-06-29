@@ -10,15 +10,22 @@ function SubscriptionButton(props:userDataType){
     const [loading,setLoading] = useState(false)
     const navigate = useNavigate()
     const log = () =>{
+        if(props.password !== props.remember_password) {
+            toast('The two passwords entered do not match')
+            return ''
+        }
         setLoading(() => true)
         userApi.subscribe(props).then((response:any) =>{
             const {user} = response?.data
             if(user) setUser(JSON.stringify(user))
             setLoading(() => false)
             navigate('/')
-        }).catch(() => {
+        }).catch((error:any) => {
             setLoading(false)
-            toast('This email has already been taken.')
+            toast('An error occured');
+            if(error?.response?.data?.error?.name?.length)  toast(error?.response?.data?.error?.name[0])
+            if(error?.response?.data?.error?.email?.length)  toast(error?.response?.data?.error?.email[0])
+            if(error?.response?.data?.error?.password?.length)  toast(error?.response?.data?.error?.password[0])
         })
     }
     return (<>

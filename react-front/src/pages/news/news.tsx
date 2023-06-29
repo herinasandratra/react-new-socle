@@ -32,6 +32,7 @@ function News() {
   })
   useEffect(()=>{
     loadPage(initialParams)
+    // eslint-disable-next-line
   },[initialParams])
   const loadPage =(params:Omit<filterPropsType,'onSearch'>)=>
   {
