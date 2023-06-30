@@ -30,12 +30,14 @@ cd react-front
 ```bash
 npm install
 ```
-```bash
-npm start
-```
-or
+return to the folder containing the docker-compose.yaml
 ```bash
 docker-compose up
+```
+or
+
+```bash
+npm start
 ```
 
 
