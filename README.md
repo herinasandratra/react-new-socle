@@ -33,6 +33,10 @@ npm install
 ```bash
 npm start
 ```
+or
+```bash
+docker-compose up
+```
 
 
 Now you should have access to the front-end on http://localhost:3000 .
